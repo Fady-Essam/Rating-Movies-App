@@ -9,6 +9,20 @@
   --color-red: #fa5252;
   --color-red-dark: #e03131;
 }
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  display: none;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#642bff, #ff22e6);
+  border-radius: 10px;
+}
 
 * {
   margin: 0;
