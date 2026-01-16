@@ -48,7 +48,7 @@ const tempWatchedData = [
 ];
 
 const average = (arr) =>
-  arr.reduce((acc, cur, i, arr) => acc + cur / arr.length, 0);
+  arr.length ? arr.reduce((acc, cur) => acc + cur, 0) / arr.length : 0;
 
 const KEY = "1bf7be6d";
 
@@ -130,8 +130,8 @@ function Box({ children }) {
 function MovieList({ movies }) {
   return (
     <ul className="list">
-      {movies?.map((movie) => (
-        <Movie movie={movie} />
+      {movies.map((movie) => (
+        <Movie key={movie.imdbID} movie={movie} />
       ))}
     </ul>
   );
